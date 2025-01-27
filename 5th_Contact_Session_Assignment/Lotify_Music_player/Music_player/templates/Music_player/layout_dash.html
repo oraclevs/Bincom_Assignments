@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/dasboard.css'%}" />
+    <title>{% block title %} Lotify {% endblock title %}</title>
+  </head>
+
+  <body>
+    <main>
+      <aside class="dash_aside">
+        <a href="/" class="logo_link">
+          <div class="logo">
+            <img src="{% static 'images/spotify.png'%}" alt="Lotify" />
+            <h1>Lotify</h1>
+          </div>
+        </a>
+        <div class="menu_one">
+          <ul>
+            <li>
+              <a href="/dashboard/"
+                ><i class="bi bi-house-door-fill"></i><span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href=""><i class="bi bi-search"></i><span>Search</span></a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="bi bi-collection"></i><span>Library</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="menu_two">
+          <ul>
+            <li>
+              <a href=""
+                ><i class="bi bi-plus-square-fill"></i
+                ><span>Create Playlist</span></a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="bi bi-heart-fill"></i><span>Liked Songs</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <ul>
+            <li>Legal</li>
+            <li>Privacy Center</li>
+            <li>Policy Center</li>
+            <li>Cookies</li>
+            <li>Ads</li>
+            <li>About</li>
+          </ul>
+        </div>
+        <div class="currentLang">
+          <i class="bi bi-globe-europe-africa"></i><span>English</span>
+        </div>
+      </aside>
+      <section class="dash_section">
+        <div class="topbar">
+          <div class="search">
+            <div class="hm_xs">
+              <i class="bi bi-house-door-fill"></i>
+            </div>
+            <div class="searchbar">
+              <input type="search" placeholder="Search" id="search_input" />
+              <div class="line_div_se"></div>
+              <button id="search_input_button">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="search_result_modal" id="search_result_modal">
+          <div class="title">
+            <h2>Result:200</h2>
+            <button id="search_result_modal_close_btn">
+              <span>close</span> <i class="bi bi-x-circle"></i>
+            </button>
+          </div>
+          <div class="result_cont" id="result_cont">
+           
+           {% block search_result %}
+            
+           {% endblock search_result %}
+            
+          </div>
+        </div>
+        {% block content %} {% endblock content %}
+      </section>
+    </main>
+
+    {% block js_script %} 
+
+    {% endblock js_script %}
+    <script src="{% static 'js/layout_dash.js' %}"></script>
+  </body>
+</html>
+
+ {% comment %} <div class="result_card">
+              <div class="imageholder_infoHolder">
+                <img src="assets/playlisttwox.png" alt="music" />
+                <div class="card_info">
+                  <h3 title="Focus on your self you brat">Focus Cu*</h3>
+                  <p class="clamp">By: Spotify</p>
+                </div>
+              </div>
+              <div>
+                <i class="bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
+            <div class="result_card">
+              <div class="imageholder_infoHolder">
+                <img src="assets/playlisttwox.png" alt="music" />
+                <div class="card_info">
+                  <h3 title="Focus on your self you brat">Focus Cu*</h3>
+                  <p class="clamp">By: Spotify</p>
+                </div>
+              </div>
+              <div>
+                <i class="bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
+            <div class="result_card">
+              <div class="imageholder_infoHolder">
+                <img src="assets/playlisttwox.png" alt="music" />
+                <div class="card_info">
+                  <h3 title="Focus on your self you brat">Focus Cu*</h3>
+                  <p class="clamp">By: Spotify</p>
+                </div>
+              </div>
+              <div>
+                <i class="bi bi-three-dots-vertical"></i>
+              </div>
+            </div> {% endcomment %}

@@ -1,0 +1,90 @@
+{% extends 'Music_player/layout_dash.html' %}
+{% load static %}
+
+
+
+
+{% block title %}
+    Lotify | Dashboard
+{% endblock title %}
+
+
+
+{% block content %}
+    <div class="container">
+                <div class="preview_playlist">
+                    <div class="title">
+                        <h2>Focus Calm Songs</h2>
+                        <button>See More</button>
+                    </div>
+                    <div class="preview_playlist_card_cont" id="">
+                        
+                        {% for playlist in playlists %}
+                        <div class="card" id='card' onClick="LocChange('{{playlist.slug}}')">
+                            <div class="imageholder">
+                                <img
+                                 src="{{playlist.play_list_cover_image.url}}"
+                                  alt="Playlist{{playlist.PlayList_or_AlbumName}}"
+                                  >
+                            </div>
+                            <div class="card_info">
+                                <h3>{{playlist.PlayList_or_AlbumName}}</h3>
+                                <p class="clamp">{{playlist.artist_name}}</p>
+                            </div>
+                        </div>
+                            
+                        {% endfor %}
+                            
+                    </div>
+
+                </div>
+                <div class="preview_playlist">
+                    <div class="title">
+                        <h2>Oracle Playlist</h2>
+                        <button>See More</button>
+                    </div>
+                    <div class="preview_playlist_card_cont" id="preview_playlist_card_cont2v">
+                         <div class="card">
+                                            <div class="imageholder"><img src="{% static 'images/playlist1.png'%}" alt="Playlist"></div>
+                                            <div class="card_info">
+                                                <h3>Focus</h3>
+                                                <p class="clamp">By Oracle</p>
+                                            </div>
+                                        </div> 
+                    </div>
+
+                </div>
+            </div>
+{% endblock content %}
+    
+
+
+{% block search_result %}
+  
+  {% for result in results.all %}
+            
+ 
+    
+    <div class="result_card" onClick="LocChange('{{result.slug}}')">
+              <div class="imageholder_infoHolder">
+                <img src="{{result.play_list_cover_image.url}}" alt="music" />
+                <div class="card_info">
+                  <h3 title="Focus on your self you brat">{{result.PlayList_or_AlbumName}}</h3>
+                  <p class="clamp">By:{{result.artist_name}}</p>
+                </div>
+              </div>
+              <div>
+                <i class="bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
+  {% endfor %}
+    
+            
+           
+{% endblock search_result %}
+    
+
+{% block js_script %}
+    <script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock js_script %}
+    

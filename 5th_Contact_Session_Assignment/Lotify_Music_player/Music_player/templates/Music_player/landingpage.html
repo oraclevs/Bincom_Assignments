@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/landingpage.css' %}" />
+    <title>Lotify</title>
+</head>
+
+<body>
+    <main>
+        <section class="hero_section">
+            <div class="hero_side_one">
+                <img src="{% static 'images/hero_background_one.png' %}" class="hero_sideone_backgroud_image" alt="" srcset="">
+                <div class="SD_one_container">
+                    <nav>
+                        <a href="#">
+                            <img src="{% static 'images/spotify.png' %}" alt="" srcset="" class="logo_hr">
+                            <h2>Lotify</h2>
+                        </a>
+                    </nav>
+                    <div class="title">
+                        <h1>Discover a world of music with Lotify</h1>
+                    </div>
+                    <div class="description">
+                        <p>Welcome to Spotify, where music comes alive. Experience a universe of endless tunes,
+                            handpicked playlists, and
+                            personalized recommendations just for you.</p>
+                    </div>
+                    <div class="btn_herox">
+                        <a href="#" class="download_hr_btn">
+                            <span>Download the app</span>
+                            <img src="{% static 'images/download_icons.png' %}" alt="" srcset="">
+                        </a>
+                        <a href="{%url 'Music_player:dashboard'%}" class="download_hr_btn center_it_hb">
+                            <span>Play on web</span>
+                            <img src="{% static 'images/www.png' %}" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="users_hr_dis">
+                        <img src="images/hero_users_dis.png" alt="">
+                        <span>517.69 million+ <br>
+                            Spotify users worldwide</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero_sidetwo">
+                <img src="{% static 'images/backgroundherotwoimage.png' %}" class="hero_sidetwo_backgroud_image" alt="" srcset="">
+                <div class="hero_sidetwo_cont">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Premium</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">More...</a></li>
+                        </ul>
+                    </nav>
+                    <div class="image_dis_cont">
+                        <img src="{% static 'images/sportiylogoone.png' %}" class="spoti_back_image" alt="">
+                        <img src="{% static 'images/phone_hand.png' %}" class="phone_hand_image" alt="">
+                        <img src="{% static 'images/playershowone.png' %}" class="player_show_image_one" alt="">
+                        <img src="{% static 'images/playershowtwo.png' %}" class="player_show_image_two" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="download_app_section">
+            <h2>Scan To Download Spotify App</h2>
+            <div class="download_app_img_cont">
+                <img src="{% static 'images/down_code_.png' %}" alt="">
+            </div>
+        </section>
+        <section class="music_jorney_section">
+            <div class="title_mjs">
+                <h2>Enhance Your Music Journey with Premium</h2>
+                <p>Upgrade to Spotify Premium and take your music journey to the next level. Enjoy uninterrupted music
+                    playback, even in
+                    offline mode. Say goodbye to those pesky ads, and indulge in high-quality audio for a truly
+                    immersive experience.
+                </p>
+            </div>
+            <div class="features">
+                <div class="card">
+                    <img src="{% static 'images/freemxcxe.png'%}" alt="">
+                    <p class="title">Ad-free music listening</p>
+                    <p class="description">Enjoy uninterrupted music</p>
+                </div>
+                <div class="card">
+                    <img src="{% static 'images/offlinexksos.png'%}" alt="">
+                    <p class="title">Offline playback</p>
+                    <p class="description">Save your data by listening offline</p>
+                </div>
+                <div class="card">
+                    <img src="{% static 'images/musicxhsgdhsue.png'%}" alt="">
+                    <p class="title">Play everywhere</p>
+                    <p class="description">Listen on your speakers,<br> TV and other favorite devices</p>
+                </div>
+                <div class="card">
+                    <img src="{% static 'images/payshdhues.png'%}" alt="">
+                    <p class="title">Pay your way</p>
+                    <p class="description">Prepay with Patm, UPI, and more.</p>
+                </div>
+            </div>
+        </section>
+        <section class="prices_section">
+            <div class="title">
+                <h2>Pick Your Premium</h2>
+                <p>Upgrade to Spotify Premium and take your music journey to the next level. Enjoy uninterrupted music
+                    playback, even in offline mode</p>
+                <img src="{% static 'images/payment_company.png'%}" alt="image">
+            </div>
+            <div class="prices_card_cont">
+                <div class="card">
+                    <div class="avb_box">
+                        <p>One-time plan available</p>
+                    </div>
+                    <div class="description">
+                        <h2>Mini</h2>
+                        <p>From $7/day</p>
+                        <p>one account on mobile only</p>
+                    </div>
+                    <div class="div_line"></div>
+                    <div class="features">
+                        <ul>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Ad free music</p>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Download more than 30 songs on one mobile device</p></li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Group session</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button>View Plans</button>
+                </div>
+                <div class="card">
+                    <div class="avb_box">
+                        <p>One-time plan available</p>
+                    </div>
+                    <div class="description">
+                        <h2>Individual</h2>
+                        <p>From $117/day</p>
+                        <p>One account </p>
+                    </div>
+                    <div class="div_line"></div>
+                    <div class="features">
+                        <ul>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Ad free music</p>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Download more than 10k songs on one mobile device</p>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Group session</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button>View Plans</button>
+                </div>
+                <div class="card duo_g_border">
+                    <div class="avb_box">
+                        <p>One-time plan available</p>
+                    </div>
+                    <div class="description">
+                        <h2>Duo</h2>
+                        <p>From $309/day</p>
+                        <p>Two account</p>
+                    </div>
+                    <div class="div_line"></div>
+                    <div class="features">
+                        <ul>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>For couples </p>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Ad free music</p>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Download more than 30 songs on one mobile device</p>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Group session</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button>View Plans</button>
+                </div>
+                <div class="card">
+                    <div class="avb_box">
+                        <p>One-time plan available</p>
+                    </div>
+                    <div class="description">
+                        <h2>Family</h2>
+                        <p>From $500/day</p>
+                        <p>Up to 6 accounts</p>
+                    </div>
+                    <div class="div_line"></div>
+                    <div class="features">
+                        <ul>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>For family who live together</p>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Block explicit content</p>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Ad free music</p>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Download more than 30 songs on one mobile device</p>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/checkmark.png'%}" alt="">
+                                <p>Group session</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button>View Plans</button>
+                </div>
+            </div>
+        </section>
+        <section class="student_discount">
+            <div>
+                <h2>Enjoy Premium Features with Our Student Discount!</h2>
+                <p>Spotify loves students, and we've got a special treat for you! Elevate your music experience without breaking the bank.
+                Unlock all the premium features you love at an exclusive student discount.</p>
+                <button>Learn more</button>
+            </div>
+        </section>
+        <footer>
+            <div class="logo">
+                <img src="{% static 'images/spotify.png'%}" alt="" srcset="">
+                <h2>Lotify</h2>
+            </div>
+            <div class="links_one">
+                <ul>
+                    <li>company</li>
+                    <li>about</li>
+                    <li>jobs</li>
+                    <li>for the record</li>
+                </ul>
+            </div>
+            <div class="links_one">
+                <ul>
+                    <li>company</li>
+                    <li>artist</li>
+                    <li>investors</li>
+                    <li>vendors</li>
+                    <li>advertisers</li>
+                    <li>developers</li>
+                </ul>
+            </div>
+            <div class="links_one">
+                <ul>
+                    <li>useful links</li>
+                    <li>support</li>
+                    <li>web player</li>
+                    <li>free mobile app</li>
+                </ul>
+            </div>
+            <div class="socails">
+                <img src="{% static 'images/facebook.png'%}" alt="" srcset="">
+            <img src="{% static 'images/twitter.png'%}" alt="" srcset="">
+                <img src="{% static 'images/instagram.png'%}" alt="" srcset="">
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

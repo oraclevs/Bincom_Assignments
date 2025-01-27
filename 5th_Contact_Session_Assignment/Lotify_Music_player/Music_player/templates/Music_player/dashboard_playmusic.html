@@ -1,0 +1,154 @@
+{% extends 'Music_player/layout_dash.html' %}
+{% load static %}
+
+
+
+
+{% block title %}
+    Lotify | Dashboard | PlayMusic
+{% endblock title %}
+
+
+
+{% block content %}
+<div class="pl_container_detail">
+                <div class="header">
+                    <img src="{{playlist.play_list_cover_image.url}}" alt="">
+                    <div>
+                        <p>playlist</p>
+                        <h1>{{playlist.PlayList_or_AlbumName}}</h1>
+                        <p class="description">Keep calm and focus with ambient and post-rock music.</p>
+                        <p>
+                            <span>Lotify</span>
+                            <span>3,940,865 likes</span>
+                            <span>252 songs,</span>
+                            <span>about 10 hr</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="controllers">
+                    <img src="{% static 'images/playicon.png'%}" alt="playicon">
+                    <span><i class="bi bi-heart"></i></span>
+                    <span><i class="bi bi-three-dots"></i></span>
+                </div>
+                <div class="playlist_table_cont">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Artist</th>
+                                <th>Album</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            {% for song in playlist.songs.all %}
+                                <tr onClick="MusicListClick('/media/{{song.audio_file}}','/media/{{song.music_icons}}','{{song.music_title}}')">
+                                <td>{{ forloop.counter }}</td>
+                                <td title="{{ song.music_title }}">{{ song.music_title }}</td>
+                                <td>{{ song.artist_name }}</td>
+                                <td>{{ song.albumName_or_playlistName }}</td>
+                                <td>5:00</td>
+                            </tr>
+                            {% endfor %}
+                                
+                            
+                            {% comment %} <tr>
+                                <td>2</td>
+                                <td>Intro</td>
+                                <td>The xx</td>
+                                <td>xx</td>
+                                <td>2:08</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Intro</td>
+                                <td>The xx</td>
+                                <td>xx</td>
+                                <td>2:08</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Intro</td>
+                                <td>The xx</td>
+                                <td>xx</td>
+                                <td>2:08</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Intro</td>
+                                <td>The xx</td>
+                                <td>xx</td>
+                                <td>2:08</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Intro</td>
+                                <td>The xx</td>
+                                <td>xx</td>
+                                <td>2:08</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Intro</td>
+                                <td>The xx</td>
+                                <td>xx</td>
+                                <td>2:08</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Intro</td>
+                                <td>The xx</td>
+                                <td>xx</td>
+                                <td>2:08</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Intro</td>
+                                <td>The xx</td>
+                                <td>xx</td>
+                                <td>2:09</td>
+                            </tr> {% endcomment %}
+                    </table>
+                </div>
+                <div class="music_player">
+                    <audio
+                        src="{% static 'images/lost-in-dreams-abstract-chill-downtempo-cinematic-future-beats-270241.mp3'%}" id="audio_player"></audio>
+                    <div class="controller_for_music_player_cont">
+                        <div class="music_details">
+                            <img src="{% static 'images/playlisttwox.png'%}" id="music_icon" alt="">
+                            <p class="clamp_one_line" id="music_title">Deep Focus</p>
+                        </div>
+                        <div class="music_controller">
+                            <div class="time_loader">
+                                <span id="time_played_display">0:00</span>
+                                <div class="time_loader_cont">
+                                    <div class="time_loader_bar" id="time_loader_bar"></div>
+                                </div>
+                                <span id="music_duration_display">3:45</span>
+                            </div>
+                            <div class="music_controller_left">
+                                <button><i class="bi bi-shuffle"></i></button>
+                                <button><i class="bi bi-skip-start-fill"></i></button>
+                                <button class="play" id="play_btn"><i class="bi bi-play-fill"></i></button>
+                                <button><i class="bi bi-skip-end-fill"></i></button>
+                                <button><i class="bi bi-repeat"></i></button>
+                            </div>
+                        </div>
+                        <div class="volume_mute">
+                            <button id="volume_mute"><i class="bi bi-volume-up-fill"></i></button>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+{% endblock content %}
+    
+
+{% block js_script %}
+       <script src="{% static 'js/dasboardtwo.js'%}"></script>
+{% endblock js_script %}
+    
